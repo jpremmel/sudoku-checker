@@ -6,15 +6,18 @@ describe('sudoku', function(){
 
   beforeEach(function() {
     examplePuzzle = new Sudoku();
-    exampleRow = examplePuzzle.row1;
   });
 
   it('should disregard all integers that are not 1-9 and also non-numeric input', function(){
-    expect(exampleRow.length).toEqual(9);
-    for (var i = 0; i < exampleRow.length; i++) {
-      expect(parseInt(exampleRow[i])).toBeGreaterThan(0);
-      expect(parseInt(exampleRow[i])).toBeLessThan(10);
-    }
+    expect(examplePuzzle.checkRow(examplePuzzle.row1)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row2)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row3)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row4)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row5)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row6)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row7)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row8)).toBe(true);
+    expect(examplePuzzle.checkRow(examplePuzzle.row9)).toBe(true);
   });
 
 
